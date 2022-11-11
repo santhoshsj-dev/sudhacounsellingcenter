@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: var(--roboto);
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+:root {
+  /*colors*/
+  --black: #1b262c;
+  --royal-green: #02453C;
+  --green: #219182;
+  --light-green: #89fcec;
+  --light-bg: #dcf2f8;
+
+  --text-gray: #505050;
+
+  --raleway: "Raleway", sans-serif;
+  --roboto-slap: "Roboto Slab", serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: var(--dark-cyan-color);
+}
+
+li {
+  list-style: none;
+}
+
+.decor img{
+  margin: 20px 0px;
+  width: 40%;
+}
+
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+  padding: 0px;
+}

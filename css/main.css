@@ -1,0 +1,519 @@
+@import url(./partials.css);
+
+/*Top Bar Start*/
+.top_bar {
+  display: flex;
+  width: 100%;
+  background-color: var(--green);
+}
+.call_us{
+  width: 85%;
+}
+
+.call_mail{
+  width: 15%;
+}
+
+.call_mail,
+.call_us {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: white;
+  padding: 5px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call_mail {
+  background-color: var(--royal-green);
+}
+
+.call_mail:hover,
+.call_us :hover {
+  color: var(--light-bg);
+}
+
+/* Top Bar End*/
+
+/* Navigation Bar Start */
+.navbar {
+  overflow: hidden;
+  z-index: 100;
+  background-color: var(--light-bg);
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 8px var(--royal-green);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .landing_slider {
+  padding-top: 60px;
+}
+
+.nav-logo {
+  padding: 5px 10px;
+  width: 250px;
+}
+
+.nav-menus {
+ display: flex;
+ justify-content: flex-end;
+ padding: 0px 50px;
+}
+
+.nav-link {
+  font-weight: 700;
+  padding: 10px;
+}
+
+.nav-link a:hover{
+  color: var(--green);
+  transition: 0.1s linear;
+}
+
+.swiper {
+  width: 100%;
+  height: 350px;
+  cursor: grab;
+}
+
+
+
+
+
+/*Carousel*/
+
+
+@media (max-width: 576px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-logo {
+    width: 80%;
+  }
+
+  .nav-menus {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    padding: 0px 10px 5px 10px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-logo {
+    width: 40%;
+  }
+
+  .nav-menus {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .nav-link {
+    padding: 0px 10px 5px 10px;
+  }
+}
+
+/* Navigation Bar End */
+
+/* landing Carousel Big Start */
+
+.l-s-img {
+  width: 100%;
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* landing Carousel Big End */
+
+/*theraphy Start*/
+
+.theraphy {
+  color: var(--text-gray);
+  font-family: var(--roboto-slap);
+  margin: 50px 0px 30px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.theraphy h2 {
+  font-weight: 800;
+}
+
+.theraphy_contents {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  font-size: 18px;
+}
+
+.theraphy_img {
+  padding: 0px 200px;
+}
+
+.theraphy_img h6 {
+  margin-top: 10px 0px 20px 0px;
+  font-size: 15px;
+  text-align: center;
+}
+
+/*theraphy End*/
+
+/*More About Start*/
+
+.more_about {
+  color: var(--text-gray);
+  background-color: var(--light-bg);
+}
+
+.more_about img {
+  width: 100%;
+}
+
+.m_a_contents {
+  line-height: 30px;
+  margin: 40px 40px;
+}
+
+.m_a_contents h2 {
+  font-family: var(--raleway);
+  font-weight: 800;
+}
+
+.read_more_btn {
+  color: var(--text-gray);
+  font-weight: 600;
+  padding: 12px 20px;
+  margin: 40px;
+  border-radius: 50px;
+  border: var(--light-green) solid 3px;
+}
+
+.read_more_btn:hover{
+  border: var(--green) solid 3px;
+  color: var(--green);
+  background-color: white;
+  transition: 0.2s linear;
+
+}
+
+/*More About End*/
+
+/*Therapist Start*/
+
+.theraphist {
+  padding: 40px 0px;
+  font-family: var(--roboto-slap);
+  color: var(--text-gray);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theraphist h2 {
+  font-weight: 800;
+  margin: 50px 0px 25px 0px;
+}
+
+.theraphist_items {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px 100px 0px 100px;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.theraphist_contents {
+  text-align: right;
+  padding: 20px 30px 0px 20px;
+}
+
+.theraphist_contents h3 {
+  font-weight: 700;
+}
+
+.theraphist_img {
+  padding: 10px 20px;
+}
+
+.theraphist img {
+  border-radius: 50px;
+  width: 100%;
+}
+/*Therapist End*/
+
+/*faq Start*/
+
+.faq {
+  text-align: left;
+}
+
+.faq_title{
+  width: 40%;
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  margin: 50px 0px 20px 0px;
+  border-bottom: #2586e0 solid 4px;
+}
+
+.pin{
+  font-size: 23px;
+  padding: 0px 10px;
+}
+
+.faq_title h2{
+  font-weight: 800;
+}
+
+.questions {
+  padding-right: 10px;
+  text-align: left;
+}
+
+.qus_item {
+  background-color: #f1f1f1;
+}
+
+.qus_header {
+  background-color: green;
+}
+
+.qus_btn {
+  width: 100%;
+  color: white;
+  background-color: #2586e0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.qus_btn:hover {
+  color: white;
+}
+
+.qus_btn strong {
+  padding: 0px 15px;
+  font-size: 40px;
+  background-color: #222222;
+}
+
+.qus_btn p {
+  margin: 0px 20px;
+}
+
+/*faq End*/
+
+/*gallery Start*/
+
+.gallery {
+  padding: 0px 10px;
+}
+
+.gallery_title{
+  width: 40%;
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  margin: 50px 0px 20px 0px;
+  border-bottom: #2586e0 solid 4px;
+}
+
+.gallery_icon{
+  color: #2586e0;
+  font-size: 23px;
+  padding: 0px 10px;
+}
+
+.gallery_title h2{
+  font-weight: 800;
+}
+
+.gallery-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-items img {
+  display: flex;
+  margin-bottom: 15px;
+  width: 95%;
+}
+
+/*gallery End*/
+
+/*testimonial Start*/
+
+.testimonial {
+  color: var(--text-gray);
+  font-family: var(--roboto-slap);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 0px;
+}
+
+.testimonial h2 {
+  font-weight: 800;
+  margin: 50px 0px 25px 0px;
+}
+
+.testimonial_content{
+  padding: 20px 150px;
+}
+
+.testimonial-card{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--light-bg);
+}
+
+
+.testimonial-card strong{
+  font-size: 100px;
+  margin: 40px 0px 5px 0px;
+  line-height: 0;
+  display: flex;
+  justify-content: start;
+}
+
+/*testimonial End*/
+
+/*In Touch Start*/
+
+.in_touch{
+  color: white;
+  display: flex;
+  background-color: var(--green);
+  padding: 100px;
+}
+
+.in_touch_contents{
+  width: 50%;
+}
+
+.message{
+  width: 50%;
+  background-color: var(--green);
+}
+
+.form{
+  display: flex;
+}
+
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+input{
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--light-green);
+  background-color: var(--green);
+  color: white;
+}
+
+.submit_btn{
+  background-color: var(--light-bg);
+  border: none;
+
+}
+
+
+
+/*In Touch End*/
+
+/*Map Start*/
+
+.map{
+  width:100%;
+  height: 400px;
+}
+
+/*Map end*/
+
+/*footer Start*/
+
+.footer{
+  display: flex;
+  background-color: var(--green);
+  color: white;
+}
+
+.rights{
+  padding: 10px;
+  display: flex ;
+  justify-content: center;
+}
+
+.social_icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*footer End*/
