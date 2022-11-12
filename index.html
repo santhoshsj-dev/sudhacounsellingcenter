@@ -26,6 +26,16 @@
 
 <body>
 
+  <div class="preloader-bg" id="preloader">
+    <div class="preloader"></div>
+  </div>
+
+
+
+
+
+
+
   <a href="https://wa.me/8608451017" class="WApp-btn" target="_blank">
     <i class="fa-brands fa-whatsapp float-btn"></i>
   </a>
@@ -369,36 +379,36 @@
   <div class="contact-us">
     <h2>Let's keep in touch</h2>
     <div class="form">
-    <form action="POST">
-      <div class="div1">
-        <label for="">First Name</label>
-        <input type="text" name="" id="">
-      </div>
-      <div class="div2">
-        <label for="">Last Name</label>
-        <input type="text" name="" id="">
-      </div>
+      <form action="POST">
+        <div class="div1">
+          <label for="">First Name</label>
+          <input type="text" name="" id="">
+        </div>
+        <div class="div2">
+          <label for="">Last Name</label>
+          <input type="text" name="" id="">
+        </div>
 
-      <div class="div3">
-        <label for="">Mobile Number</label>
-        <input type="tel" name="" id="">
-      </div>
+        <div class="div3">
+          <label for="">Mobile Number</label>
+          <input type="tel" name="" id="">
+        </div>
 
-      <div class="div4">
-        <label for="">E-Mail ID</label>
-        <input type="email" name="" id="">
-      </div>
+        <div class="div4">
+          <label for="">E-Mail ID</label>
+          <input type="email" name="" id="">
+        </div>
 
-      <div class="div5">
-        <label for="">Message</label>
-        <textarea name=""></textarea>
-      </div>
+        <div class="div5">
+          <label for="">Message</label>
+          <textarea name=""></textarea>
+        </div>
 
-      <button class="submit">SUBMIT</button>
+        <button class="submit">SUBMIT</button>
 
 
-    </form>
-  </div>
+      </form>
+    </div>
   </div>
 
 
@@ -429,6 +439,12 @@
   <script src="./js/main2.js"></script>
 
   <script>
+
+    setTimeout(function () {
+      $('.preloader-bg').fadeToggle();
+    }, 3000);
+
+
     window.onscroll = function () { myFunction() };
 
     var navbar = document.getElementById("nav");
