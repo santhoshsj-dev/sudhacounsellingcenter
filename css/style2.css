@@ -1,5 +1,41 @@
 @import url(partials.css);
 
+.preloader-bg {
+  background: white;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 120;
+}
+
+.preloader {
+  display: block;
+  margin: 50vh auto;
+  width: 20px;
+  height: 20px;
+  animation: preloader-animation 1.2s infinite;
+  background-color: var(--green);
+  border-radius: 50%;
+}
+
+@keyframes preloader-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateX(-200%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.25) translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0) translateX(200%);
+  }
+}
+
+
 .WApp-btn {
   position: fixed;
   width: 60px;
@@ -362,7 +398,7 @@ nav ul li ul li a {
   .am-prev {
     position: relative;
   }
-  
+
   .am-next {
     position: relative;
   }
@@ -772,51 +808,56 @@ nav ul li ul li a {
 
 /*-----------------------------------Contact Us-----------------------------------*/
 
-.contact-us{
+.contact-us {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px;
 }
 
-.contact-us h2{
-  padding-bottom: 10px ;
+.contact-us h2 {
+  padding-bottom: 10px;
 }
 
-.form{
+.form {
   display: flex;
   justify-content: center;
   width: 50%;
   background-color: #eff3f0;
 }
 
-form{
+form {
   padding: 50px 0px;
   width: 70%;
 }
 
-.div1, .div2, .div3, .div4, .div5{
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-label{
+label {
   padding-bottom: 5px;
 }
 
-input, textarea{
+input,
+textarea {
   outline: none;
   border: none;
   background-color: unset;
   border-bottom: var(--royal-green) solid 2px;
 }
 
-textarea{
+textarea {
   height: 150px;
 }
 
-.submit{
+.submit {
   width: 100%;
   border: 1px solid var(--royal-green);
   background-color: var(--green);
@@ -827,28 +868,27 @@ textarea{
   padding: 10px;
 }
 
-.submit:hover{
+.submit:hover {
   border: 1px solid var(--green);
   background-color: var(--royal-green);
 }
 
 @media (max-width: 576px) {
 
-  .contact-us{
+  .contact-us {
     padding: 50px 40px;
   }
-  .form{
+
+  .form {
     width: 100%;
   }
-  
-  form{
+
+  form {
     width: 90%;
   }
 }
 
-@media (min-width: 577px) and (max-width: 992px) {
-  
-}
+@media (min-width: 577px) and (max-width: 992px) {}
 
 /*-----------------------------------Footer-----------------------------------*/
 
