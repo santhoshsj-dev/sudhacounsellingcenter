@@ -1,26 +1,114 @@
-@import url(./partials.css);
+@import url(partials.css);
 
-/*Top Bar Start*/
+/*-----Preloader-----*/
+
+.preloader-bg {
+  background: white;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 120;
+}
+
+.preloader {
+  display: block;
+  margin: 50vh auto;
+  width: 20px;
+  height: 20px;
+  animation: preloader-animation 1.2s infinite;
+  background-color: var(--green);
+  border-radius: 50%;
+}
+
+@keyframes preloader-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateX(-200%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.25) translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0) translateX(200%);
+  }
+}
+
+/*-----Whatsapp floating button-----*/
+
+.WApp-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.WApp-btn:hover {
+  background-color: #FFF;
+  color: #25d366;
+  transition: 0.3s ease-in-out;
+}
+
+.float-btn {
+  margin-top: 15px;
+}
+
+@media (max-width: 576px) {
+
+  .WApp-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .float-btn {
+    width: 20px;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+  }
+
+}
+
+@media (min-width: 577px) and (max-width: 992px) {}
+
+
+/*-----------------------------------Top Bar-----------------------------------*/
+
 .top_bar {
   display: flex;
   width: 100%;
   background-color: var(--green);
 }
-.call_us{
+
+.call_us {
   width: 85%;
 }
 
-.call_mail{
+.call_mail {
   width: 15%;
 }
 
-.call_mail,
-.call_us {
+.call_mail a,
+.call_us a {
   font-size: 15px;
   letter-spacing: 0.5px;
-  color: white;
+  color: #ffffff;
+  text-decoration: none;
   padding: 5px;
-  font-weight: 300;
+  font-weight: 100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,18 +123,104 @@
   color: var(--light-bg);
 }
 
-/* Top Bar End*/
+/*-----------------------------------Navigation Bar-----------------------------------*/
 
-/* Navigation Bar Start */
-.navbar {
-  overflow: hidden;
-  z-index: 100;
+.navigation {
+  height: 70px;
+  z-index: 3;
+  position: sticky;
   background-color: var(--light-bg);
   color: var(--black);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 1px 8px var(--royal-green);
+  box-shadow: 0 0.2px 4px var(--royal-green);
+}
+
+.brand {
+  position: absolute;
+  float: left;
+  line-height: 70px;
+}
+
+.brand a,
+.brand a:visited {
+  color: var(--royal-green);
+  text-decoration: none;
+}
+
+.header_logo {
+  width: 230px;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a,
+nav ul li a:visited {
+  text-transform: uppercase;
+  font-weight: 500;
+  display: block;
+  padding: 0 25px;
+  line-height: 70px;
+  color: var(--royal-green);
+  background: var(--royal-green);
+  text-decoration: none;
+}
+
+nav ul li a {
+  background: transparent;
+  color: var(--royal-green);
+}
+
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: var(--green);
+  color: #ffffff;
+}
+
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " \025BE";
+}
+
+nav ul li ul li {
+  min-width: 190px;
+}
+
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+#navbar-toggle {
+  visibility: hidden;
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  height: 55px;
+  width: 70px;
 }
 
 .sticky {
@@ -55,269 +229,404 @@
   width: 100%;
 }
 
-.sticky + .landing_slider {
+.sticky+.content {
   padding-top: 60px;
 }
 
-.nav-logo {
-  padding: 5px 10px;
-  width: 250px;
+@media only screen and (max-width: 800px) {
+
+  nav ul li a:visited {
+    color: white;
+  }
+
+  .navigation {
+    height: 70px;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+
+  .brand {
+    margin: 0px 5px;
+  }
+
+  #navbar-toggle {
+    visibility: visible;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 0px;
+    box-shadow: 0 0.2px 4px var(--royal-green);
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul li {
+    float: none;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    background: var(--light-bg);
+  }
+
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
 }
 
-.nav-menus {
- display: flex;
- justify-content: flex-end;
- padding: 0px 50px;
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
 }
 
-.nav-link {
-  font-weight: 700;
-  padding: 10px;
+#navbar-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
 }
 
-.nav-link a:hover{
-  color: var(--green);
-  transition: 0.1s linear;
+#navbar-toggle span,
+#navbar-toggle span:before,
+#navbar-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 30px;
+  background: var(--royal-green);
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
 }
 
-.swiper {
+#navbar-toggle span:before {
+  top: -10px;
+}
+
+#navbar-toggle span:after {
+  bottom: -10px;
+}
+
+#navbar-toggle.active span {
+  background-color: transparent;
+}
+
+#navbar-toggle.active span:before,
+#navbar-toggle.active span:after {
+  top: 0;
+}
+
+#navbar-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#navbar-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+/*-----------------------------------Main Carousel-----------------------------------*/
+
+#owl-demo .item img {
   width: 100%;
-  height: 350px;
-  cursor: grab;
 }
 
 
+@media only screen and (max-width: 800px) {
 
+  #owl-demo .item img {
+    display: block;
+    margin: auto;
+    width: 600px;
 
-
-/*Carousel*/
-
-
-@media (max-width: 576px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .nav-logo {
-    width: 80%;
-  }
-
-  .nav-menus {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-
-  .nav-link {
-    font-size: 18px;
-    padding: 0px 10px 5px 10px;
   }
 }
 
-@media (min-width: 577px) and (max-width: 992px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-  }
+@media only screen and (min-width: 800px) {}
 
-  .nav-brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .nav-logo {
-    width: 40%;
-  }
-
-  .nav-menus {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-
-  .nav-link {
-    padding: 0px 10px 5px 10px;
-  }
-}
-
-/* Navigation Bar End */
-
-/* landing Carousel Big Start */
-
-.l-s-img {
-  width: 100%;
-  height: 450px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* landing Carousel Big End */
-
-/*theraphy Start*/
+/*-----------------------------------Theraphy-----------------------------------*/
 
 .theraphy {
-  color: var(--text-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: var(--roboto-slap);
-  margin: 50px 0px 30px 0px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  padding: 40px 180px 20px 180px;
 }
 
-.theraphy h2 {
-  font-weight: 800;
-}
-
-.theraphy_contents {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 0px 0px 0px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-p{
-  font-size: 18px;
-}
-
-.theraphy_img {
-  padding: 0px 200px;
-}
-
-.theraphy_img h6 {
-  margin-top: 10px 0px 20px 0px;
-  font-size: 15px;
-  text-align: center;
-}
-
-/*theraphy End*/
-
-/*More About Start*/
-
-.more_about {
+.theraphy .sub-topic {
+  font-size: 2rem;
   color: var(--text-gray);
+}
+
+.divider {
+  padding: 10px;
+  width: 150px;
+}
+
+.theraphy p {
+  padding: 0px 100px;
+  color: var(--secondry-text-gray);
+  text-align: center;
+  line-height: auto;
+}
+
+.theraphy-img {
+  position: relative;
+  padding: 10px 0px 0px 0px;
+  text-align: center;
+}
+
+.am-prev,
+.am-next {
+  font-size: 30px;
+  color: var(--secondry-text-gray);
+  border: none;
+  background-color: unset;
+}
+
+.am-prev:hover,
+.am-next:hover {
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+
+.am-prev {
+  position: absolute;
+  top: 30%;
+  left: -100px;
+}
+
+.am-next {
+  position: absolute;
+  top: 30%;
+  right: -100px;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .theraphy {
+    padding: 30px 0px;
+  }
+
+  .theraphy .sub-topic {
+    font-size: 1.7rem;
+  }
+
+  .theraphy p {
+    padding: 0px 20px;
+  }
+
+  .theraphy-img {
+    padding: 10px 50px;
+  }
+
+  .am-prev {
+    position: relative;
+  }
+
+  .am-next {
+    position: relative;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {}
+
+/*-----------------------------------More About Us-----------------------------------*/
+
+.more-about-us {
+  font-family: var(--roboto-slap);
+  display: flex;
+  align-items: flex-start;
+  padding: 40px auto;
   background-color: var(--light-bg);
 }
 
-.more_about img {
-  width: 100%;
+.more-about-us img {
+  width: 50%;
 }
 
-.m_a_contents {
-  line-height: 30px;
-  margin: 40px 40px;
+.more-about-us-contents {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 20px 30px 30px;
 }
 
-.m_a_contents h2 {
-  font-family: var(--raleway);
-  font-weight: 800;
+.more-about-us-title {
+  color: #212121;
+  font-size: 2rem;
 }
 
-.read_more_btn {
-  color: var(--text-gray);
-  font-weight: 600;
-  padding: 12px 20px;
-  margin: 40px;
-  border-radius: 50px;
-  border: var(--light-green) solid 3px;
+.more-about-us-contents {
+  color: var(--secondry-text-gray);
 }
 
-.read_more_btn:hover{
-  border: var(--green) solid 3px;
-  color: var(--green);
-  background-color: white;
-  transition: 0.2s linear;
-
+.more-about-us-contents img {
+  width: 150px;
+  margin: 10px 0px;
 }
 
-/*More About End*/
+.more-about-us-welcome {
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 0px 0px 15px 0px;
+}
 
-/*Therapist Start*/
+.more-about-us-contents p {
+  font-style: italic;
+}
 
-.theraphist {
-  padding: 40px 0px;
-  font-family: var(--roboto-slap);
-  color: var(--text-gray);
-  text-align: center;
+.read-more {
+  margin-top: 20px;
+  width: 150px;
+}
+
+@media (max-width: 576px) {
+  .more-about-us {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .more-about-us img {
+    width: 100%;
+  }
+
+  .more-about-us-contents {
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+  }
+
+  .more-about-us-title {
+    font-size: 1.7rem;
+  }
+
+  .more-about-us-contents img {
+    width: 150px;
+    margin: 10px 0px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {}
+
+/*-----------------------------------Therapist-----------------------------------*/
+
+.Therapist {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 100px 0px 100px;
 }
 
-.theraphist h2 {
-  font-weight: 800;
-  margin: 50px 0px 25px 0px;
+.Therapist .sub-topic {
+  font-size: 2rem;
+  color: var(--text-gray);
 }
 
-.theraphist_items {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 20px 100px 0px 100px;
-  padding: 20px;
-  border-radius: 50px;
+.Therapist img {
+  margin: 10px auto 20px auto;
+  width: 150px;
 }
 
-.theraphist_contents {
+.therapist-profile-card {
+  padding: 0px 20px;
+  border-radius: 20px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row-reverse;
+  -webkit-box-shadow: 0px 0px 26px -4px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 0px 0px 26px -4px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 0px 26px -4px rgba(0, 0, 0, 0.18);
+}
+
+.therapist-profile-card img {
+  width: 300px;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.therapist-profile-card-contents {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
   text-align: right;
-  padding: 20px 30px 0px 20px;
 }
 
-.theraphist_contents h3 {
-  font-weight: 700;
+.therapist-profile-card-content p {
+  text-align: justify;
 }
 
-.theraphist_img {
-  padding: 10px 20px;
+@media (max-width: 576px) {
+
+  .Therapist {
+    padding: 50px 20px;
+  }
+
+  .therapist-profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .therapist-profile-card img {
+    width: 50%;
+    border-radius: unset;
+    clip-path: circle(39%);
+  }
+
+  .therapist-profile-card-contents {
+    padding-bottom: 20px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+  }
 }
 
-.theraphist img {
-  border-radius: 50px;
-  width: 100%;
-}
-/*Therapist End*/
+@media (min-width: 577px) and (max-width: 992px) {}
 
-/*faq Start*/
+/*-----------------------------------Accordian FAQ-----------------------------------*/
+
+.faq-gallery {
+  display: flex;
+  align-items: baseline;
+  padding: 0px 20px 40px 20px;
+}
 
 .faq {
+  width: 40%;
   text-align: left;
 }
 
-.faq_title{
-  width: 40%;
+.faq_title {
   display: flex;
   align-items: baseline;
   justify-content: left;
-  margin: 50px 0px 20px 0px;
-  border-bottom: #2586e0 solid 4px;
+  margin: 0px 0px 20px 0px;
+  border-bottom: var(--green) solid 4px;
 }
 
-.pin{
+.pin {
   font-size: 23px;
+  rotate: -30deg;
   padding: 0px 10px;
 }
 
-.faq_title h2{
+.faq_title h2 {
   font-weight: 800;
 }
 
 .questions {
-  padding-right: 10px;
   text-align: left;
 }
 
@@ -325,14 +634,10 @@ p{
   background-color: #f1f1f1;
 }
 
-.qus_header {
-  background-color: green;
-}
-
 .qus_btn {
   width: 100%;
   color: white;
-  background-color: #2586e0;
+  background-color: var(--green);
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -345,86 +650,116 @@ p{
 .qus_btn strong {
   padding: 0px 15px;
   font-size: 40px;
-  background-color: #222222;
+  background-color: var(--royal-green);
 }
 
 .qus_btn p {
   margin: 0px 20px;
 }
 
-/*faq End*/
-
-/*gallery Start*/
+/*-----------------------------------Gallery-----------------------------------*/
 
 .gallery {
-  padding: 0px 10px;
+  width: 60%;
+  margin-left: 20px;
 }
 
-.gallery_title{
-  width: 40%;
+.gallery_title {
   display: flex;
   align-items: baseline;
   justify-content: left;
   margin: 50px 0px 20px 0px;
-  border-bottom: #2586e0 solid 4px;
+  border-bottom: var(--green) solid 4px;
 }
 
-.gallery_icon{
-  color: #2586e0;
+.gallery_icon {
+  color: var(--green);
   font-size: 23px;
   padding: 0px 10px;
 }
 
-.gallery_title h2{
+.gallery_title h2 {
   font-weight: 800;
 }
 
-.gallery-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.gallery-grp {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
 }
 
-.gallery-items img {
-  display: flex;
-  margin-bottom: 15px;
-  width: 95%;
+.gallery-item {
+  cursor: pointer;
+  width: 99%;
 }
 
-/*gallery End*/
+@media (max-width: 576px) {
 
-/*testimonial Start*/
+  .faq {
+    width: 100%;
+  }
 
-.testimonial {
-  color: var(--text-gray);
-  font-family: var(--roboto-slap);
+  .gallery {
+    width: 100%;
+    margin-left: unset;
+    margin-bottom: 50px;
+  }
+
+  .faq-gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .gallery-item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {}
+
+/*-----------------------------------Testimonials-----------------------------------*/
+
+.testimonials {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin: 50px 0px;
+  align-items: center;
+  padding: 40px 10px 20px 10px;
+  background-image: url(../assets/contact-us.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.testimonial h2 {
-  font-weight: 800;
-  margin: 50px 0px 25px 0px;
+
+.testimonials .sub-topic {
+
+  font-size: 2rem;
+  color: white;
 }
 
-.testimonial_content{
+.testimonials img {
+  margin: 10px auto;
+  width: 150px;
+}
+
+.testimonial_content {
   padding: 20px 150px;
 }
 
-.testimonial-card{
+.testimonial-card {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 350px;
+  height: 250px;
   padding: 30px;
-  border-radius: 20px;
+  border: 1px solid var(--green);
+  border-radius: 10px;
   background-color: var(--light-bg);
 }
 
 
-.testimonial-card strong{
+.testimonial-card strong {
   font-size: 100px;
   margin: 40px 0px 5px 0px;
   line-height: 0;
@@ -432,88 +767,183 @@ p{
   justify-content: start;
 }
 
-/*testimonial End*/
+@media (max-width: 576px) {
 
-/*In Touch Start*/
+  .testimonials .sub-topic {
+    font-size: 1.7rem;
+  }
 
-.in_touch{
+  .testimonial_content {
+    padding: 20px 0px;
+  }
+
+  .testimonial-card {
+    margin: 0px 30px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {}
+
+/*-----------------------------------In Touch-----------------------------------*/
+
+.contact {
   color: white;
   display: flex;
   background-color: var(--green);
-  padding: 100px;
+  padding: 60px;
 }
 
-.in_touch_contents{
-  width: 50%;
+.map {
+  width: 80%;
 }
 
-.message{
-  width: 50%;
-  background-color: var(--green);
+.in-touch {
+  padding: 0px 50px;
+  width: 60%;
 }
 
-.form{
-  display: flex;
+.in-touch h2 {
+  font-weight: 800;
 }
 
-form{
+.in-touch p {
+  font-style: italic;
+}
+
+.address p {
+  margin-left: 40px;
+}
+
+.phone p,
+.mail p {
+  margin-left: 38px;
+
+}
+
+
+@media (max-width: 576px) {
+  .contact {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .in-touch {
+    padding: 30px 0px;
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 577px) and (max-width: 992px) {}
+
+/*-----------------------------------Contact Us-----------------------------------*/
+
+.contact-us {
+  font-family: 'Roboto', sans-serif, 'arial';
+  background-color: var(--royal-green);
+  padding: 50px 400px 20px 400px;
+}
+
+.contact-us-topic {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Poppins', sans-serif, 'arial';
+  font-weight: 600;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.contact-us-sub-topic {
+  width: 100%;
+  font-family: 'Roboto', sans-serif, 'arial';
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #9b9b9b;
+  line-height: 1.5;
+  text-align: center;
 }
 
 label{
   color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
 }
 
-input{
+input,textarea{
+  background-color: var(--light-bg);
   outline: none;
   border: none;
-  border-bottom: 2px solid var(--light-green);
-  background-color: var(--green);
-  color: white;
+  margin: 5px 0px;
+  padding: 5px;
+  width: 100%;
 }
 
-.submit_btn{
-  background-color: var(--light-bg);
-  border: none;
+@media (max-width: 576px) {
+  .contact-us {
+    padding: 50px 10px 20px 10px;
+  }
 
+  input{
+    margin: 5px 0px 10px 0px;
+  }
 }
 
+@media (min-width: 577px) and (max-width: 992px) {}
 
+/*-----------------------------------Footer-----------------------------------*/
 
-/*In Touch End*/
-
-/*Map Start*/
-
-.map{
-  width:100%;
-  height: 400px;
-}
-
-/*Map end*/
-
-/*footer Start*/
-
-.footer{
+.footer {
+  width: 100%;
   display: flex;
-  background-color: var(--green);
+  background-color: var(--royal-green);
   color: white;
+  padding: 20px 0px 10px 0px;
 }
 
-.rights{
-  padding: 10px;
-  display: flex ;
+.rights {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.rights a:hover{
+  color: var(--light-bg);
+}
+
+.social_icons {
+  
+  display: flex;
   justify-content: center;
 }
 
-.social_icons{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.fa-facebook-f,
+.fa-youtube,
+.fa-instagram {
+  cursor: pointer;
+  margin: auto 5px;
+  width: 15px;
+  height: 15px;
+  color: var(--royal-green);
+  background-color: white;
+  padding: 5px;
+  border-radius: 100%;
 }
 
-/*footer End*/
+@media (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .fa-facebook-f,
+  .fa-youtube,
+  .fa-instagram {
+    margin: 0px 5px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {}
