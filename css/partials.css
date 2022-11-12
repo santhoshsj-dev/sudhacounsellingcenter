@@ -5,9 +5,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  font-family: var(--roboto);
-  font-size: 15px;
-  box-sizing: border-box;
+  font-family: var(--roboto-slap);
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+.landing-slider{
+  position: relative;
 }
 
 :root {
@@ -19,41 +23,26 @@ body {
   --light-bg: #dcf2f8;
 
   --text-gray: #505050;
+  --secondry-text-gray: #7e7d76;
 
   --raleway: "Raleway", sans-serif;
   --roboto-slap: "Roboto Slab", serif;
   --roboto: "Roboto", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: unset;
+
+.fa-phone,
+.fa-map-location,
+.fa-envelope {
+  margin: 0px 8px;
 }
 
-a:hover {
-  color: var(--dark-cyan-color);
+a {
+  color: white;
+  text-decoration: none;
 }
 
 li {
   list-style: none;
 }
 
-.decor img{
-  margin: 20px 0px;
-  width: 40%;
-}
-
-.col-md-1,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-10,
-.col-md-11,
-.col-md-12 {
-  padding: 0px;
-}
