@@ -12,9 +12,6 @@
   <!--Owl Carousel Link-->
   <link rel="stylesheet" href="./css/owl.carousel.css" />
 
-  <!--Swiper Link-->
-  <link rel="stylesheet" href="./css/swiper.css" />
-
   <!--User Defined CSS Link-->
   <link rel="stylesheet" href="./css/style2.css" />
 
@@ -28,9 +25,13 @@
 </head>
 
 <body>
+
+  <a href="https://wa.me/8608451017" class="WApp-btn" target="_blank">
+    <i class="fa-brands fa-whatsapp float-btn"></i>
+  </a>
   <!---------------------------Top Bar-------------------------------->
 
-  <div class="top_bar">
+  <div class="top_bar" id="home">
     <div class="call_us">
       <a href="tel:9876543210"><i class="fa fa-phone"></i><b> Call Us Today +91 998 877 6544</b>
       </a>
@@ -42,7 +43,7 @@
 
   <!---------------------------Navigation Bar-------------------------------->
 
-  <section class="navigation">
+  <section class="navigation" id="nav">
     <div class="nav-container">
       <div class="brand">
         <a href="#!"><img class="header_logo" src="./assets/logo.png" alt="" width="200px" /></a>
@@ -71,36 +72,36 @@
 
   <!---------------------------Main Carousel-------------------------------->
 
-  <div class="landing_slider">
-    <!-- Slider main container -->
-    <div class="swiper main-carousel">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img src="./assets/banner1.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/banner2.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/banner3.jpg" alt="" />
-        </div>
+  <div class="landing-slider">
+    <div class="owl-carousel main-carousel">
+      <div class="item">
+        <img src="./assets/banner1.jpg" alt="" />
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+      <div class="item">
+        <img src="./assets/banner2.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="./assets/banner3.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="./assets/banner4.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="./assets/banner5.jpg" alt="" />
+      </div>
     </div>
   </div>
+
 
   <!---------------------------Theraphy-------------------------------->
 
   <div class="theraphy">
     <b class="sub-topic">Theraphy / Counselling</b>
-    <img src="./assets/divider.png" alt="divider">
+    <img class="divider" src="./assets/divider.png" alt="divider">
     <p>Our mission is to help you awake that amazing person trapped inside and teach you to connect with your inner self
       again.</p>
-
     <div class="owl-carousel theraphy-img">
+
       <div class="item">
         <img src="./assets/Alcoholism.jpg" alt="" />
         <b>Alcoholism</b>
@@ -138,28 +139,30 @@
         <b>Schizophrenia</b>
       </div>
     </div>
+    <button class="am-next"><i class="fa-solid fa-chevron-circle-right"></i></button>
+    <button class="am-prev"><i class="fa-solid fa-chevron-circle-left"></i></button>
   </div>
 
   <!---------------------------More About Us-------------------------------->
 
-  <div class="more-about-us">
+  <div class="more-about-us" id="about">
     <img src="./assets/clinic_img.jpg" alt="Clinic Image">
     <div class="more-about-us-contents">
-      <b class="more-about-us-title">More About Sudha Counselling Centre</b>
-      <img src="./assets/divider.png" alt="divider">
+      <b class="more-about-us-title">More About Us</b>
+      <img src="./assets/one-side-divider.png" alt="divider">
       <b class="more-about-us-welcome">Welcome to Sudha Counselling Centre</b>
       <p>We’re here to help people of all ages deal with the psychological problem including disorder, relationship
         problems and other issues they are facing.</p>
       <p>Our team consists of an expert group of psychologists who possess specialist training and extensive experience.
         Our psychologists can deliver best in class treatment that can make all the difference to your life. By
         understanding, absorbing and accepting your experience you and you will be the best friends again.</p>
-      <button class="btn btn-outline-success">READ MORE</button>
+      <a class="btn btn-outline-success read-more" href="#contact">READ MORE</a>
     </div>
   </div>
 
   <!---------------------------Therapist-------------------------------->
 
-  <div class="Therapist">
+  <div class="Therapist" id="therapists">
     <b class="sub-topic">Therapist</b>
     <img src="./assets/divider.png" alt="divider">
 
@@ -329,7 +332,7 @@
 
   <!-------------------------------------In Touch-------------------------------->
 
-  <div class="contact">
+  <div class="contact" id="contact">
     <div class="map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31119.72350447932!2d79.68234179775362!3d12.845508836347019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1665325927219!5m2!1sen!2sin"
@@ -337,8 +340,7 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="in-touch">
-      <h2>Let's keep in touch</h2>
-      <h3>Our Contact</h3>
+      <h2>Our Contact</h2>
       <p>
         Feel free to contact me.
       </p>
@@ -346,7 +348,7 @@
         <div class="address">
           <strong><i class="fa fa-map-location"></i> Address</strong>
           <p>
-            No. 36, Wallahjah Road, (Opposite Kalaivanar Arangam),<br />Chepauk,
+            No. 36, Wallahjah Road,<br> (Opposite Kalaivanar Arangam),<br>Chepauk,
             Chennai - 600 005
           </p>
         </div>
@@ -360,120 +362,166 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 
+  <!-------------------------------------Contact Us-------------------------------->
 
-
-
-
-    <div class="footer">
-      <div class="rights col-md-9">
-        <a><a href="#">Sudha Counselling Center © 2020</a>. All Rights Reserved.</a>
+  <div class="contact-us">
+    <h2>Let's keep in touch</h2>
+    <div class="form">
+    <form action="POST">
+      <div class="div1">
+        <label for="">First Name</label>
+        <input type="text" name="" id="">
       </div>
-      <div class="social-icons col-md-3">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-brands fa-instagram"></i>
+      <div class="div2">
+        <label for="">Last Name</label>
+        <input type="text" name="" id="">
       </div>
+
+      <div class="div3">
+        <label for="">Mobile Number</label>
+        <input type="tel" name="" id="">
+      </div>
+
+      <div class="div4">
+        <label for="">E-Mail ID</label>
+        <input type="email" name="" id="">
+      </div>
+
+      <div class="div5">
+        <label for="">Message</label>
+        <textarea name=""></textarea>
+      </div>
+
+      <button class="submit">SUBMIT</button>
+
+
+    </form>
+  </div>
+  </div>
+
+
+
+  <!-------------------------------------Footer-------------------------------->
+  <div class="footer">
+    <div class="rights col-md-9">
+      <p><a href="#">Sudha Counselling Center © 2020</a>. All Rights Reserved.</p>
     </div>
+    <div class="social-icons col-md-3">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+  </div>
 
 
 
 
 
 
-    <!--Essential Javascripts-->
-    <script src="./js/jquery-3.6.0.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script src="./js/fontawesome.js"></script>
-    <script src="./js/owl.carousel.js"></script>
-    <script src="./js/swiper.js"></script>
-    <script src="./js/main2.js"></script>
+  <!--Essential Javascripts-->
+  <script src="./js/jquery-3.6.0.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/fontawesome.js"></script>
+  <script src="./js/owl.carousel.js"></script>
 
-    <script>
-      (function ($) {
-        $(function () {
-          //  open and close nav
-          $("#navbar-toggle").click(function () {
-            $("nav ul").slideToggle();
-          });
+  <script src="./js/main2.js"></script>
 
-          // Hamburger toggle
-          $("#navbar-toggle").on("click", function () {
-            this.classList.toggle("active");
-          });
+  <script>
+    window.onscroll = function () { myFunction() };
 
-          // If a link has a dropdown, add sub menu toggle.
-          $("nav ul li a:not(:only-child)").click(function (e) {
-            $(this).siblings(".navbar-dropdown").slideToggle("slow");
+    var navbar = document.getElementById("nav");
+    var sticky = navbar.offsetTop;
 
-            // Close dropdown when select another dropdown
-            $(".navbar-dropdown").not($(this).siblings()).hide("slow");
-            e.stopPropagation();
-          });
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    (function ($) {
+      $(function () {
+        //  open and close nav
+        $("#navbar-toggle").click(function () {
+          $("nav ul").slideToggle();
         });
-      })(jQuery);
 
-      const swiper = new Swiper(".swiper", {
-        // Optional parameters
-        slidesPerView: 1,
-        loop: true,
-        grabxCursor: true,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
+        // Hamburger toggle
+        $("#navbar-toggle").on("click", function () {
+          this.classList.toggle("active");
+        });
 
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-        },
+        // If a link has a dropdown, add sub menu toggle.
+        $("nav ul li a:not(:only-child)").click(function (e) {
+          $(this).siblings(".navbar-dropdown").slideToggle("slow");
+
+          // Close dropdown when select another dropdown
+          $(".navbar-dropdown").not($(this).siblings()).hide("slow");
+          e.stopPropagation();
+        });
       });
+    })(jQuery);
 
-      $(".theraphy-img").owlCarousel({
-        loop: true,
-        margin: 40,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplaySpeed: 3000,
-        autoplayHoverPause: true,
-        responsiveclass: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 4,
-          },
+    $(".main-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 3000,
+      autoplayHoverPause: true,
+    });
+
+
+    $(".theraphy-img").owlCarousel({
+      loop: true,
+      margin: 30,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplaySpeed: 3000,
+      autoplayHoverPause: true,
+      responsiveclass: true,
+      nav: true,
+      navText: [$('.am-prev'), $('.am-next')],
+      responsive: {
+        0: {
+          items: 1,
         },
-      });
-
-      $(".testimonial_content").owlCarousel({
-        loop: true,
-        margin: 20,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplaySpeed: 2000,
-        autoplayHoverPause: true,
-        responsiveclass: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 4,
-          },
+        600: {
+          items: 3,
         },
-      });
+        1000: {
+          items: 3,
+        },
+      },
+    });
 
-    </script>
+    $(".testimonial_content").owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 2000,
+      autoplayHoverPause: true,
+      responsiveclass: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 3,
+        },
+      },
+    });
+
+  </script>
 </body>
 
 </html>
